@@ -1,4 +1,4 @@
-import struct,zlib
+import zlib
 class Package:
     def __init__(self):
         pass
