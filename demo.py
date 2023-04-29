@@ -1,5 +1,5 @@
 from sgplib import Package
-data="你好，世界！鸡你太美鸡你太美鸡你太美鸡你太美鸡你太美鸡你太美鸡你太美鸡你太美".encode("utf-8")
+data="".encode("utf-8")
 before=data
 print(f"Raw: {data.decode('utf-8')}")
 print(f"Sizeof raw data: {data.__sizeof__()} bytes")

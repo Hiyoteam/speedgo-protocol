@@ -1,4 +1,4 @@
-import zlib
+import zlib,socket
 class Package:
     def __init__(self):
         pass
@@ -31,3 +31,19 @@ class Package:
         self.raw=inside
         return inside
 
+class Socket:
+    def __init__(self,socket):
+        self.socket=socket
+    def recv(self,size):
+        data=self.socket.recv(size)
+        if not data:
+            raise IOError("Socket closed.")
+        temp=Package()
+        return temp.decode(data)
+    def send(self,data,ziplevel=6):
+        temp=Package()
+        zipped=temp.encode(data,ziplevel)
+        return self.socket.send(zipped)
+    @property
+    def fileno(self):
+        return self.socket.fileno
