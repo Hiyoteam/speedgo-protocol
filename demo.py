@@ -1,5 +1,6 @@
 from sgplib import Package
-data="".encode("utf-8")
+print('The SpeedGo Demo program')
+data="这是一个测试句子，没有任何的意义yeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee".encode("utf-8")
 before=data
 print(f"Raw: {data.decode('utf-8')}")
 print(f"Sizeof raw data: {data.__sizeof__()} bytes")
